@@ -1,3 +1,4 @@
+// User schema with bcrypt password hashing
 import mongoose, { Schema } from 'mongoose';
 
 import bcrypt from 'bcrypt';
