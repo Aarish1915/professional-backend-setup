@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone API Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Clone API Tester</h1>
+
+    <section class="panel">
+      <div class="top-row">
+        <h2>Auth</h2>
+        <a class="secondary-button" href="profile.html">Profile / Watch History</a>
+      </div>
+      <div class="form-grid">
+        <div>
+          <h3>Register</h3>
+          <input id="registerFullName" placeholder="Full name" />
+          <input id="registerEmail" placeholder="Email" />
+          <input id="registerUsername" placeholder="Username" />
+          <input id="registerPassword" type="password" placeholder="Password" />
+          <button id="registerBtn">Register</button>
+        </div>
+        <div>
+          <h3>Login</h3>
+          <input id="loginEmail" placeholder="Email" />
+          <input id="loginPassword" type="password" placeholder="Password" />
+          <button id="loginBtn">Login</button>
+        </div>
+        <div>
+          <h3>Token</h3>
+          <button id="refreshBtn">Refresh Token</button>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Video</h2>
+      <div class="form-grid">
+        <div>
+          <h3>Upload Video</h3>
+          <input id="videoTitle" placeholder="Title" />
+          <input id="videoDescription" placeholder="Description" />
+          <input id="videoDuration" type="number" placeholder="Duration (seconds)" />
+          <input id="videoThumbnail" placeholder="Thumbnail URL (optional)" />
+          <label class="file-label">Video file</label>
+          <input id="videoFile" type="file" accept="video/*" />
+          <select id="videoVisibility">
+            <option value="true">Public</option>
+            <option value="false">Private</option>
+          </select>
+          <button id="uploadVideoBtn">Upload Video</button>
+        </div>
+        <div>
+          <h3>List & Get</h3>
+          <button id="listVideosBtn">List Public Videos</button>
+          <input id="videoIdInput" placeholder="Video ID" />
+          <button id="getVideoBtn">Get Video by ID</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Comments</h2>
+      <div class="form-grid">
+        <div>
+          <input id="commentVideoId" placeholder="Video ID" />
+          <textarea id="commentText" placeholder="Comment text"></textarea>
+          <button id="postCommentBtn">Post Comment</button>
+        </div>
+        <div>
+          <button id="listCommentsBtn">List Comments for Video</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Result</h2>
+      <pre id="resultArea">Ready</pre>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
